@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Questions Game</title>
+    <link rel="stylesheet" href="/game.css">
+</head>
+<body>
+    <div class="header">
+        <h1>20 Questions Game</h1>
+    </div>
+    
+    <div class="chat-container" id="chatContainer">
+        <div class="message assistant">
+            <div class="message-bubble">
+                Try to guess what I'm thinking about.
+            </div>
+        </div>
+    </div>
+    
+    <div class="input-area">
+        <input type="hidden" id="gameId" value="{{ game_id }}">
+        <input type="text" id="questionInput" placeholder="What do you want to ask?" autocomplete="off">
+        <button id="sendButton" onclick="sendQuestion()">➤</button>
+    </div>
+
+    <script src="/game.js"></script>
+</body>
+</html>

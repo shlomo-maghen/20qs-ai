@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 20px;
+    color: #333;
+}
+
+.chat-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.message.user {
+    flex-direction: row-reverse;
+}
+
+.message-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    word-wrap: break-word;
+}
+
+.message.user .message-bubble {
+    background-color: #0084ff;
+    color: white;
+}
+
+.message.assistant .message-bubble {
+    background-color: #e4e6eb;
+    color: #000;
+}
+
+.input-area {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#questionInput {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 15px;
+    outline: none;
+}
+
+#questionInput:focus {
+    border-color: #0084ff;
+}
+
+#sendButton {
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sendButton:hover {
+    background-color: #0073e6;
+}
+
+#sendButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.win-indicator {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+}
